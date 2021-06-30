@@ -1,0 +1,73 @@
+.container{
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav nav nav"
+    "picture text artifactbuild"
+    "picture1 text1 artifactbuild1"
+    "picture2 picture2 text2"
+ 
+}
+  
+body{
+    background-color: antiquewhite;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: aliceblue;
+    padding: 20px;
+}
+.nav li {
+    display: inline;
+    padding: 20px;
+}
+
+.picture {
+    grid-area: picture;
+    
+}
+.text {
+    grid-area:text;
+    padding:50px;
+}
+
+ .artifactbuild{
+    grid-area: artifactbuild;
+}
+
+.picture1 {
+    grid-area: picture1;
+}
+
+.text1 {
+    grid-area: text1;
+}
+.artifactbuild1{
+    grid-area: artifactbuild;
+}
+.picture2{
+    grid-area: picture2;
+}
+.picture2{
+    grid-area: picture2;
+}
+.text2{
+    grid-area: text2;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    grid-area: footer;
+}
+

@@ -1,0 +1,56 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav nav"
+    "characterInfo artifactBuild"
+    "artifactInfo artifactBuild"
+    "consolationInfo consolationInfo"
+    "picture picture"
+    "footer footer";
+
+}
+  
+body{
+    background-color: antiquewhite;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: aliceblue;
+    padding: 20px;
+}
+.nav li {
+    display: inline;
+    padding: 20px;
+}
+
+.characterInfo {
+    grid-area: characterInfo;}
+
+.artifactBuild {
+    grid-area: artifactBuild;
+    padding:50px;
+}
+
+.artifactInfo {
+    grid-area: artifactInfo;
+}
+
+.consolationInfo {
+    grid-area: consolationInfo;
+}
+
+.picture {
+    grid-area: picture;
+    padding: 30%;
+}
+
+.footer {
+    grid-area: footer;
+}
+img{
+    width:100%;
+}
+
