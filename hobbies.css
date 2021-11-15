@@ -1,19 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 .container{
+    font-family: 'Castoro', serif;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "nav nav"
+    "nav nav "
+   "header header"
     "characterInfo artifactBuild"
-    "artifactInfo artifactBuild"
     "consolationInfo consolationInfo"
     "picture picture"
     "footer footer";
-
 }
-  
-body{
-    background-color: antiquewhite;
+ 
+@media screen and (max-width: 900px){
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "nav"
+      "header"
+      "characterInfo"
+      "artifactBuild"
+      "artifactInfo" 
+      "consolationInfo"
+      "picture"
+      "footer";
+  }
+}
+
+.body{
+    background-color: aliceblue;
 }
 
 .nav {
@@ -26,31 +42,78 @@ body{
     padding: 20px;
 }
 
+.header {
+  grid-area: header;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+    
+}
+
+
+a {
+  color: black;
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
 .characterInfo {
-    grid-area: characterInfo;}
+    background-color: aliceblue;   
+    grid-area: characterInfo;
+    padding: 50px;
+}
 
 .artifactBuild {
+    background-color: aliceblue;
     grid-area: artifactBuild;
-    padding:50px;
+    /*padding:200px;*/
 }
 
 .artifactInfo {
-    grid-area: artifactInfo;
+  background-color: aliceblue;
+  grid-area: artifactInfo;
+  padding: 50px;
 }
 
 .consolationInfo {
+       background-color: aliceblue;
+     
     grid-area: consolationInfo;
 }
 
 .picture {
+      background-color: aliceblue;
     grid-area: picture;
-    padding: 30%;
+    padding: 200px
+    
 }
 
-.footer {
-    grid-area: footer;
+footer {
+  grid-area: footer;
+  padding: 30px;
+  text-align: center;
 }
+
+
 img{
-    width:100%;
+   
+   width:100%;
 }
 
+
+input[type=checkbox] {
+    display: none;
+  }
+.container img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+  
+.container img:active {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  cursor: zoom-out;
+}

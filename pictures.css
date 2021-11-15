@@ -1,56 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 .container{
+    font-family: 'Castoro', serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
    "nav nav nav"
-    "picture1 picture2 picture3"
+   "header header header"
+   "picture1 picture2 picture3"
    "pciture4 picture5 picture6"
-   "picture7 picture8 picture9";
+   "picture7 picture8 picture9"
+   "footer footer footer";
 }
-.nav{
-    grid-area: auto;
+
+
+@media screen and (max-width: 600px){
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+   "header"
+   "picture1"
+    "picture2"
+    "picture3"
+   "pciture4" 
+   "picture5" 
+   "picture6"
+   "picture7"
+   "picture8"
+    "picture9"
+   "footer";
+  }
 }
-li {
-    display:inline;
+
+
+
+
+.header {
+    grid-area: header;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  
+    
+}
+
+.nav {
+    grid-area: nav;
+    background-color: rgb(240, 249, 255);
+    padding :20px;
+}
+
+
+.nav li {
+    display: inline;
     padding: 20px;
 }
+
+
+
 .pictures1{
     grid-area: auto;
      padding: 20px;
-}
+    flex: 20px;
+   
+    }
 .pictures2{
     grid-area: auto;
     padding: 20px;
+    flex: 20px;
 }
 .pictures3{
     grid-area: auto;
-    padding: 20px;
+     padding: 20px;
+    flex: 20px;
 }
 .pictures4{
     grid-area: auto;
     padding: 20px;
+    flex: 20px;
 }
 .pictures5{
     grid-area: auto;
     padding: 20px;
+    flex: 20px;
 }
 .pictures6{
     grid-area: auto;
     padding: 20px;
+    flex: 20px;
 }
 .pictures7{
     grid-area: auto;
     padding: 20px;
+    flex: 20px;
 }
 .pictures8{
     grid-area: auto;
     padding: 20px;
+    flex: 20px;
 }
 .pictures9{
     grid-area: auto;
     padding: 20px;
+    flex: 20px;
 }
-img{
+
+
+input[type=checkbox] {
+    display: none;
+  }
+  
+
+.container img {
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+  }
+  
+  .container img:active {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    cursor: zoom-out;
+  }
+  a {
+    color: black;
+    font-family: helvetica;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+ img{
     width:100%;
 }
+
+footer {
+  grid-area: footer;
+  padding: 30px;
+  text-align: center;
+}
+

@@ -1,17 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 .container{
+    font-family: 'Castoro', serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "nav nav nav"
+    "header header header"
+    "aboutme picture picture"
     "picture_1 picture_1 text_1"
     "text_2 picture_2 picture_2"
-    "text_3 text_3 picture_3"
+    "home_1 home_1 picture_3"
     "footer footer footer";
+}
+
+@media screen and (max-width: 600px){
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "nav"
+      "header"
+      "aboutme"
+      "picture"
+      "text_1"
+      "picture_1"
+      "text_2"
+      "picture_2"
+      "home_1"
+      "picture_3"
+      "footer";
+  }
 }
   
 body{
-    background-color: antiquewhite;
+    background-color: white;
+}
+
+.aboutme{
+   grid-area:aboutme;
+    background-color:aliceblue ;
+    padding: 20px;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .nav {
@@ -20,17 +55,23 @@ body{
     padding: 20px;
     
 }
+
 .nav li {
     display: inline;
     padding: 20px;
 }
+
 .picture_1{
     grid-area: picture_1;
     background-color:aliceblue ;
+    padding: 20px;
 }
+
 .text_1{
     grid-area: text_1;
     background-color: aliceblue;
+    vertical-align: middle;
+    margin: 0;
     padding: 20px;
 }
 .text_2{
@@ -38,20 +79,59 @@ body{
     background-color:aliceblue ;
     padding: 20px;
 }
+
 .picture_2{
    grid-area: picture_2;
    background-color: aliceblue;
 }
-.text_3{
-    grid-area:text_3;
+
+.home_1{
+    grid-area:home_1;
     background-color:aliceblue;
     padding: 20px;   
 }
+
 .picture_3{
     grid-area: picture_3;
     background-color:aliceblue;
 }
 
-.footer {
-    grid-area: footer;
+footer {
+  grid-area: footer;
+  padding: 30px;
+  text-align: center;
 }
+
+
+input[type=checkbox] {
+    display: none;
+  }
+  
+.container img {
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+  }
+  
+  .container img:active {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    cursor: zoom-out;
+  }
+  
+  a {
+    color: black;
+    font-family: helvetica;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .picture{
+   grid-area: picture;
+  background-color:aliceblue;
+    padding: 10px;
+  }
+ 
+  img{
+    width:100%;
+}
+
