@@ -19,10 +19,9 @@
     grid-template-areas: 
       "nav"
       "header"
-      "characterInfo"
-      "artifactBuild"
-      "artifactInfo" 
-      "consolationInfo"
+     "artifactInfo" 
+     "artifactBuild"
+     "characterInfo"
       "picture"
       "footer";
   }

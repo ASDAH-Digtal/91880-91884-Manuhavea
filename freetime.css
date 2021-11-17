@@ -7,11 +7,33 @@
     grid-template-areas: 
     "nav nav nav"
    "header header header"
-    "picture text1 artifactbuild"
-    "picture1 text text"
+    "picture artifactbuild artifactbuild"
+    "picture1 text text1"
     "footer footer footer"
 }
   
+
+@media screen and (max-width:600px){
+  .container{
+    grid-template-columns:1fr;
+    grid-template-areas: 
+   "nav"
+   "header"
+    "picture"
+     "artifactbuild"
+    "picture1" 
+    "text"
+     "text1"
+    "footer"
+  }
+}
+
+
+
+
+
+  
+
 .header {
     grid-area: header;
     text-align: center;
@@ -19,23 +41,6 @@
     padding-bottom: 80px;
     
 }
-
-@media screen and (max-width: 600px){
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "nav"
-   "header"
-    "picture"
-    "text1" 
-    "artifactbuild"
-    "picture1" 
-    "text"
-    "footer";
-  }
-}
-
-
 
 .nav {
     grid-area: nav;
@@ -50,30 +55,29 @@
 .picture {
     grid-area: picture;
   background-color: aliceblue;
-
+  
 }
 .text {
     grid-area:text;
     background-color: aliceblue;
-    padding: 50px;
+    padding: 10px ;
 }
 
  .artifactbuild{
     grid-area: artifactbuild;
    background-color: aliceblue;
-   padding:50px;
+   padding:10px;
 }
 
 .picture1 {
   grid-area: picture1;
-  width: 100%;
   background-color: aliceblue;
 }
 
 .text1 {
   grid-area: text1;
   background-color: aliceblue;
-  padding:50px;
+  padding:10px;
 }
 .artifactbuild1{
   grid-area: artifactbuild;
@@ -95,8 +99,6 @@ input[type=checkbox] {
 }
   
 
-
-
 .container img {
   transition: transform 0.25s ease;
   cursor: zoom-in;
@@ -108,9 +110,7 @@ input[type=checkbox] {
   cursor: zoom-out;
 }
 
-img{
-  flex:10px;
-}
+
 
 
 footer {
